@@ -102,7 +102,7 @@ def main():
         packages = None
 
     if packages is not None:
-        results = dict(ansible_facts=dict(ansible_packages=packages))
+        results = dict(ansible_facts=dict(packages=packages))
     else:
         results = dict(skipped=True, msg="Unsupported Distribution")
     module.exit_json(**results)
